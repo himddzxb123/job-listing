@@ -5,6 +5,10 @@
   <% @jobs.each do |job| %>
   <tr>
     <td>
+    <%= render_job_ststus(job)%>
+      <%= link_to(job.title,admin_job_path(job))%>
+    </td>
+    <td>
       <%= link_to(job.title,job_path(job))%>
     </td>
     <td>
